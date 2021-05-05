@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}Find{% endblock %}
+
+
+{% block content %}
+<form action="{% url 'search_profile' %}" method="get">
+  {% csrf_token %}
+  <input type="text" name="q">
+  <input type="submit" value="Search">
+</form>
+{% endblock %}

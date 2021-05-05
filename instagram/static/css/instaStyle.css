@@ -1,0 +1,226 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #FAFAFA;
+}
+
+.username {
+    width: 343px;
+    height: 42px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.username-text {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    letter-spacing: -0.3px;
+    
+    color: #262626;
+}
+
+
+
+.info-profile {
+    width: 343px;
+    height: 82px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.avatar {
+    width: 77px;
+    height: 77px;
+    border-radius: 50px;
+}
+
+.statistics {
+    width: 174px;
+    height: 34px;
+    margin-left: 46px;
+    margin-top: 23px;
+
+}
+
+.statistics-list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.list-data {
+    margin-right: 15px;
+}
+
+.list-data a {
+    text-decoration: none;
+    color: #262626;
+}
+
+.text-statistics {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.inf {
+    font-size: 12px;
+    font-weight: 500;
+}
+
+
+
+.bio {
+    width: 342px;
+    height: 89px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+
+.bio-name {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 14px;
+}
+
+.bio-text {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+
+
+.edit {
+   margin-left: auto;
+   margin-right: auto;
+   width: 342px;
+}
+
+.btn-edit-profile {
+    background-color:#FFFFFF;
+    border: 1px solid #DBDBDB;
+    box-sizing: border-box;
+    border-radius: 5px;
+    width: 342px;
+    height: 30px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 14px;
+
+
+    align-items: center;
+    text-align: center;
+}
+
+
+
+.view-content {
+    margin-top: 19px;
+    border-top: 1px solid #DBDBDB;
+    display: flex;
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    justify-content: space-between;
+}
+
+
+
+.content {
+    width: 376px;
+    height: 376px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: scroll;
+}
+
+.image-content {
+    width: 123px;
+    height: 123px;
+    margin: 0;
+    margin-right: -2px;
+    margin-bottom: -1px;
+}
+
+.image-content-center {
+    width: 123px;
+    height: 123px;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+
+.navigation {
+    position:absolute;
+    bottom:0;
+    width:100%;
+    height: 55px;
+}
+
+.navigation-content {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 27px;
+    padding-right: 27px;
+    height: 55px;
+    background-color: #FAFAFA;
+}
+
+.btn-delete-p {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    background-color: #FAFAFA;
+}
+
+.btn-login {
+    background-color: #0095F6;
+    color: #fff;
+    border-radius: 5px;
+    padding: 5px 5px 5px 5px;
+    width: 270px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.inp-login {
+    margin-bottom: 10px;
+    width: 250px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.blk-login {
+    margin-top: 60%;
+}
+
+.btn-login-s {
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 600;
+}

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}Login{% endblock %}
+
+
+{% block content %}
+<div class="blk-login">
+    <form method="post">
+        {% csrf_token %}
+        <div>
+            <input class="inp-login" placeholder="Имя пользователя" type="text" name="username" autofocus="" autocapitalize="none" autocomplete="username" maxlength="150" required="" id="id_username">
+            <input class="inp-login" placeholder="Пароль" type="password" name="password" autocomplete="current-password" required="" id="id_password">
+            <button class="btn-login" type="submit"><span class="btn-login-s">Войти</span></button>
+        </div>
+    </form>
+</div>
+{% endblock %}

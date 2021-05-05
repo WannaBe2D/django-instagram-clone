@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/instaStyle.css' %}">
+    <link rel="stylesheet" href="{% static 'css/followers.css' %}">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+    {% block content %}
+
+    {% endblock %}
+    
+    <div class="navigation">
+        <div class="navigation-content">
+            <div class="icon-nav-1">
+                <a href="{% url 'time_line' %}">
+                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0.327327 9.35097C0.118853 9.54049 0 9.80916 0 10.0909V20.6485C0 21.2008 0.447716 21.6485 1 21.6485H8.38095V15.2676C8.38095 13.8211 9.55354 12.6485 11 12.6485C12.4465 12.6485 13.619 13.8211 13.619 15.2676V21.6485H21C21.5523 21.6485 22 21.2008 22 20.6485V10.0909C22 9.80916 21.8811 9.54049 21.6727 9.35097L11.6727 0.26006C11.2913 -0.0866868 10.7087 -0.0866865 10.3273 0.26006L0.327327 9.35097Z" fill="black"/>
+                    </svg>  
+                </a>
+            </div>
+    
+            <div class="icon-nav-2">
+                <a href="{% url 'search' %}">
+                    <svg width="23" height="24" viewBox="0 0 23 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M10 19C14.9706 19 19 14.9706 19 10C19 5.02944 14.9706 1 10 1C5.02944 1 1 5.02944 1 10C1 14.9706 5.02944 19 10 19Z" stroke="black" stroke-width="1.5"/>
+                        <path d="M21 22L16.5 17.5" stroke="black" stroke-width="1.5" stroke-linecap="square"/>
+                    </svg> 
+                </a>
+            </div>
+    
+            <div class="icon-nav-3">
+                <a href="{% url 'create_post' %}">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M1 7C1 3.68629 3.68629 1 7 1H17C20.3137 1 23 3.68629 23 7V17C23 20.3137 20.3137 23 17 23H7C3.68629 23 1 20.3137 1 17V7Z" stroke="black" stroke-width="1.5"/>
+                        <path d="M12 7V17" stroke="black" stroke-width="1.5" stroke-linecap="square"/>
+                        <path d="M17 12H7" stroke="black" stroke-width="1.5" stroke-linecap="square"/>
+                    </svg>    
+                </a>  
+            </div>
+            
+            <div class="icon-nav-4">
+                <a href="{% url 'activity' %}">
+                    <svg width="24" height="23" viewBox="0 0 24 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M11.8992 21L10.3188 19.5668C4.70572 14.4714 1 11.109 1 6.99455C1 3.63215 3.63215 1 6.99455 1C8.89101 1 10.7112 1.88283 11.8992 3.27248C13.0872 1.88283 14.9074 1 16.8038 1C20.1662 1 22.7984 3.63215 22.7984 6.99455C22.7984 11.109 19.0926 14.4714 13.4796 19.5668L11.8992 21Z" stroke="black" stroke-width="1.5"/>
+                    </svg>
+                </a>  
+            </div>
+    
+            <div class="icon-nav-5">
+                <a href="{% url 'profile' %}">
+                    <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M11.5 12C14.5376 12 17 9.53757 17 6.5C17 3.46243 14.5376 1 11.5 1C8.46243 1 6 3.46243 6 6.5C6 9.53757 8.46243 12 11.5 12Z" stroke="black" stroke-width="1.5"/>
+                        <path d="M1 23V20C1 17.7909 2.79045 16 4.99937 16H18.0006C20.2094 16 22 17.7954 22 20V23" stroke="black" stroke-width="1.5"/>
+                    </svg>  
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

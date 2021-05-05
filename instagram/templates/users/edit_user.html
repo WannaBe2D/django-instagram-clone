@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}Edit user{% endblock %}
+
+
+{% block content %}
+<div class="blk-login">
+  <form method="post">
+    {% csrf_token %}
+    <div>
+      <input class="inp-login" type="text" name="username" value="andrei" maxlength="150" required="" id="id_username">
+      <input class="inp-login" type="email" name="email" value="andrei@email.com" maxlength="254" id="id_email">
+      <button class="btn-login" type="submit">Edit</button>
+
+      <a href="{% url 'edit_profile' %}">Detail settings</a>
+      <a href="{% url 'logout' %}">logout</a>
+    </div>
+  </form>
+</div>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}Comments{% endblock %}
+
+
+{% block content %}
+
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Comment">
+</form>
+
+{% for comm in post.comment_post.all %}
+    <p><img class="avatar-follow-f" src="{{ comm.author.profile.avatar.url }}"> {{ comm.author }} | {{ comm.text }}</p>
+{% endfor %}
+
+{% endblock %}

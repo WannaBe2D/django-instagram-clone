@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block title %}Follower{% endblock %}
+
+{% block content %}
+{% for follower in user.profile.follower.all %}
+    <div class="profile-f">
+        <div class="avatar-f">
+            <img class="avatar-follow-f" src="{{ follower.profile.avatar.url }}">
+        </div>
+        <div class="info-profile-f">
+            <div class="username-f">
+                <p class="username-text-f"><a class="delete-link-f" href="{% url 'profile_follower' follower.id %}">{{ follower.username }}</a></p>
+            </div>
+            <div class="fullname-f">
+                <p class="fullname-text-f">{{ follower.first_name }} {{ follower.last_name }}</p>
+            </div>
+        </div>
+        <div class="follow-f">
+            {% if follower  in user.profile.following.all %}
+
+            {%else%}
+                <form action="{% url 'add_following' follower.id %}" method="post">
+                    {% csrf_token %}
+                    <input class="follow-text-f" type="submit" value="Подписаться">
+                </form>
+            {% endif %}
+        </div>
+        <a class="delete-link-f" href="#">
+            {% if follower  in user.profile.following.all %}
+                <form action="{% url 'unfollow' follower.id %}" method="post">
+                    {% csrf_token %}
+                    <input class="delete-text-f" type="submit" value="Удалить">
+                </form>
+            {% endif %}
+        </a>
+    </div>
+{% endfor %}
+{% endblock %}

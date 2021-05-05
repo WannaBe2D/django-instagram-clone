@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block title %}Following{% endblock %}
+
+
+{% block content %}
+    {% for following in user.profile.following.all %}
+        <div class="profile-f">
+        <div class="avatar-f">
+            <img class="avatar-follow-f" src="{{ following.profile.avatar.url }}">
+        </div>
+        <div class="info-profile-f">
+            <div class="username-f">
+                <p class="username-text-f"><a class="delete-link-f" href="{% url 'profile_follower' following.id %}">{{ follower.username }}</a></p>
+            </div>
+            <div class="fullname-f">
+                <p class="fullname-text-f">{{ following.first_name }} {{ following.last_name }}</p>
+            </div>
+        </div>
+        <div class="follow-f">
+            {% if following in user.profile.following.all %}
+
+            {%else%}
+                <a class="follow-text-f" href="#">Подписаться</a>
+            {% endif %}
+        </div>
+        <a class="delete-link-f" href="#">
+            <div class="delete-f">
+                <p class="delete-text-f">Удалить</p>
+            </div>
+        </a>
+    </div>
+    {% endfor %}
+{% endblock %}

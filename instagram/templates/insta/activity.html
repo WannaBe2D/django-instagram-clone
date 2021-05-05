@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block title %}Actitvity{% endblock %}
+
+
+{% block content %}
+
+    {% for i in a %}
+        {% for y in i.likes.all %}
+            <div class="profile-f">
+        <div class="info-profile-f">
+            <div class="username-f">
+                <p class="username-text-f"><a class="delete-link-f" href="{% url 'profile_follower' y.id %}">{{ y.username }}</a></p>
+            </div>
+            <div class="fullname-f">
+                <p class="fullname-text-f">{{ y.first_name }} {{ y.last_name }}</p>
+            </div>
+        </div>
+        <div class="follow-f">
+            {% if y in user.profile.following.all or y == user %}
+
+            {%else%}
+                <form action="{% url 'add_following' y.id %}" method="post">
+                    {% csrf_token %}
+                    <input class="follow-text-f" type="submit" value="Подписаться">
+                </form>
+            {% endif %}
+        </div>
+            <div class="follow-f">
+                <p class="delete-text-f">Лайкнул ваше фото</p>
+            </div>
+    </div>
+        {% endfor %}
+    {% endfor %}
+
+{% endblock %}

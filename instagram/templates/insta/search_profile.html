@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}Search{% endblock %}
+
+
+{% block content %}
+    {% for u in object_list %}
+<div class="profile-f">
+        <div class="avatar-f">
+            <img class="avatar-follow-f" src="{{ u.profile.avatar.url }}">
+        </div>
+        <div class="info-profile-f">
+            <div class="username-f">
+                <p class="username-text-f"><a class="delete-link-f" href="{% url 'profile_follower' u.id %}">{{ u }}</a></p>
+            </div>
+            <div class="fullname-f">
+                <p class="fullname-text-f">{{ follower.first_name }} {{ follower.last_name }}</p>
+            </div>
+        </div>
+</div>
+    {% endfor %}
+{% endblock %}

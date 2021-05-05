@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}Edit user{% endblock %}
+
+
+{% block content %}
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <input class="inp-login" type="file" name="avatar" accept="image/*" id="id_avatar">
+    <input class="inp-login" placeholder="description" type="text" name="bio" maxlength="500" id="id_bio">
+
+    <button class="btn-login" type="submit">Edit</button>
+  </form>
+{% endblock %}
