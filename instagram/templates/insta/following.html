@@ -25,9 +25,12 @@
             {% endif %}
         </div>
         <a class="delete-link-f" href="#">
-            <div class="delete-f">
-                <p class="delete-text-f">Удалить</p>
-            </div>
+            {% if following  in user.profile.following.all %}
+                <form action="{% url 'unfollow' following.id %}" method="post">
+                    {% csrf_token %}
+                    <input class="delete-text-f" type="submit" value="Удалить">
+                </form>
+            {% endif %}
         </a>
     </div>
     {% endfor %}
